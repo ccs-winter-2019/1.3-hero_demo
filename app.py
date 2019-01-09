@@ -12,13 +12,10 @@ def index():
     # open file for reading, 'r'
     # file is saved to variable
     index_file = open('index.html', 'r')
+    # read contents of the file
+    my_html = index_file.read()
 
-    if not input:
-        # read contents of the file
-        my_html = index_file.read()
-    else:
-        # read contents of the file
-        my_html = index_file.read()
+    if input:
         # add use input back into the html
         my_html = my_html.replace("{{search-term-value}}",input)
 
