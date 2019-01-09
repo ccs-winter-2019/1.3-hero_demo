@@ -9,16 +9,18 @@ def index():
     input = request.args.get('search-term')
     print(input)
 
-    if not input:
-        input = ''
-
     # open file for reading, 'r'
     # file is saved to variable
     index_file = open('index.html', 'r')
 
-    # read contents of the file
-    my_html = index_file.read()
-    my_html = my_html.replace("{{search-term-value}}",input)
+    if not input:
+        # read contents of the file
+        my_html = index_file.read()
+    else:
+        # read contents of the file
+        my_html = index_file.read()
+        # add use input back into the html
+        my_html = my_html.replace("{{search-term-value}}",input)
 
     # close the file out when you're done
     index_file.close()
