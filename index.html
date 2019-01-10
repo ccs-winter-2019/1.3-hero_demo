@@ -6,17 +6,20 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="./static/styles.css">
 </head>
 <body>
-    <h1>Hello world!</h1>
-    <ul>
-        <li>Learning HTML<a href="?post=html">click me</a></li>
-        <li>Learning Python<a href="?post=python">click me</a></li>
-        <li>Learning JavaScript<a href="?post=javascript">click me</a></li>
-    </ul>
-    <form action="/">
-        <input type="text" name="search-term" value="{{search-term-value}}">
-    </form>
+    <div class="container">
+      <div class="hero-image">
+          <form action="/">
+              <div class="form-group">
+                <label for="searchInput">What makes you happy?</label>
+                <input type="text" class="form-control" id="searchInput" name="search-term" value="{{search-term-value}}">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+      </div>
+    </div>
 </body>
 </html>
